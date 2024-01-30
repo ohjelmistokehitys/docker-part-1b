@@ -1,2 +1,1 @@
-# Which command you used to complete the exercise?
-
+# Which command(s) did you use to complete the exercise 1.10?

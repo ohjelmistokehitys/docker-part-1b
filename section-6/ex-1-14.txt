@@ -1,2 +1,2 @@
-# Copy the text you see when you successfully click the "press to test!" button in the frontend here:
+# Copy the text you see in exercise 1.14 when you click the "press to test!" button in the frontend:
 Exercise 1.14: Suc...
