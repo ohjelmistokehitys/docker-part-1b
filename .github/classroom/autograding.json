@@ -1,19 +1,9 @@
 {
     "tests": [
         {
-            "name": "00 example",
+            "name": "Exercise 1.9",
             "setup": "",
-            "run": "cat ./section-0/ex00.txt | python3 ./.github/classroom/ex00_test.py",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 1,
-            "points": 0
-        },
-        {
-            "name": "Exercise 1.1",
-            "setup": "",
-            "run": "cat ./section-1/ex11.txt | python3 ./.github/classroom/ex11_test.py",
+            "run": "cat section-5/ex-1-09.txt | python3 .github/classroom/ex-1-09_test.py",
             "input": "",
             "output": "",
             "comparison": "included",
@@ -21,9 +11,9 @@
             "points": 10
         },
         {
-            "name": "Exercise 1.2",
+            "name": "Exercise 1.10",
             "setup": "",
-            "run": "cat ./section-1/ex12.txt | python3 ./.github/classroom/ex12_test.py",
+            "run": "cat section-5/ex-1-10.txt | python3 .github/classroom/ex-1-10_test.py",
             "input": "",
             "output": "",
             "comparison": "included",
@@ -31,49 +21,9 @@
             "points": 10
         },
         {
-            "name": "Exercise 1.3",
+            "name": "Exercise 1.11",
             "setup": "",
-            "run": "cat ./section-2/ex13.txt | python3 ./.github/classroom/ex13_test.py",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 1,
-            "points": 10
-        },
-        {
-            "name": "Exercise 1.4",
-            "setup": "",
-            "run": "cat ./section-2/ex14.txt | python3 ./.github/classroom/ex14_test.py",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 1,
-            "points": 10
-        },
-        {
-            "name": "Exercise 1.5",
-            "setup": "",
-            "run": "cat ./section-3/ex15.txt | python3 ./.github/classroom/ex15_test.py",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 1,
-            "points": 10
-        },
-        {
-            "name": "Exercise 1.6",
-            "setup": "",
-            "run": "cat ./section-3/ex16.txt | python3 ./.github/classroom/ex16_test.py",
-            "input": "",
-            "output": "",
-            "comparison": "included",
-            "timeout": 1,
-            "points": 10
-        },
-        {
-            "name": "Exercise 1.7",
-            "setup": "",
-            "run": "cat ./section-3/Dockerfile | python3 ./.github/classroom/ex17_test.py",
+            "run": "cat section-6/spring.Dockerfile | python3 .github/classroom/ex-1-11_test.py",
             "input": "",
             "output": "",
             "comparison": "included",
@@ -81,14 +31,64 @@
             "points": 20
         },
         {
-            "name": "Exercise 1.8",
+            "name": "Exercise 1.12 Dockerfile",
             "setup": "",
-            "run": "cat ./section-3/server.Dockerfile | python3 ./.github/classroom/ex18_test.py",
+            "run": "cat section-6/frontend.Dockerfile | python3 .github/classroom/ex-1-12_test.py",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 10
+        },
+        {
+            "name": "Exercise 1.12 copying the message",
+            "setup": "",
+            "run": "cat section-6/ex-1-12.txt | python3 .github/classroom/ex-1-12b_test.py",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 10
+        },
+        {
+            "name": "Exercise 1.13",
+            "setup": "",
+            "run": "cat section-6/backend.Dockerfile | python3 .github/classroom/ex-1-13_test.py",
             "input": "",
             "output": "",
             "comparison": "included",
             "timeout": 1,
             "points": 20
+        },
+        {
+            "name": "Exercise 1.14 backend",
+            "setup": "",
+            "run": "cat section-6/backend.Dockerfile | python3 .github/classroom/ex-1-14_backend_test.py",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 5
+        },
+        {
+            "name": "Exercise 1.14 frontend",
+            "setup": "",
+            "run": "cat section-6/frontend.Dockerfile | python3 .github/classroom/ex-1-14_frontend_test.py",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 5
+        },
+        {
+            "name": "Exercise 1.14 copying the message",
+            "setup": "",
+            "run": "cat section-6/ex-1-14.txt | python3 .github/classroom/ex-1-14b_test.py",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 10
         }
     ]
 }

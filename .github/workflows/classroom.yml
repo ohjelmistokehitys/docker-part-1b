@@ -17,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # - uses: education/autograding@v1
+      - uses: education/autograding@v1

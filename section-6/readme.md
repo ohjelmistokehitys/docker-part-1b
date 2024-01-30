@@ -9,7 +9,7 @@ To complete these exercises, you'll need to clone, fork or download sample proje
 📣 **You don't need to install any of the tools or applications used by the sample projects locally.** All installations are supposed to happen in the containers during the build process.
 
 
-## Exercise 1.11: Spring
+## Exercise 1.11: Spring *(20 %)*
 
 > Create a Dockerfile for an old Java Spring project that can be found from the [course repository](https://github.com/docker-hy/material-applications/tree/main/spring-example-project).
 >
@@ -38,7 +38,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 > Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
 
 
-## Exercise 1.12: Hello, frontend!
+## Exercise 1.12: Hello, frontend! *(20 %)*
 
 > A good developer creates well-written READMEs. Such that they can be used to create Dockerfiles with ease.
 >
@@ -66,7 +66,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 ⚠ **Note!** Based on the Haaga-Helia teachers' experience, the dependencies of the frontend project are very picky about the Node.js version and the environment. We strongly recommend using node:16 base image (`FROM node:16`) in this exercise to prevent unnecessary compatibility issues.
 
 
-## Exercise 1.13: Hello, backend!
+## Exercise 1.13: Hello, backend! *(20 %)*
 
 > Clone, fork or download a project from
 > [https://github.com/docker-hy/material-applications/tree/main/example-backend](https://github.com/docker-hy/material-applications/tree/main/example-backend).
@@ -84,7 +84,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 💡 The backend in this exercise is written in [Go (golang)](https://go.dev/). **You won't need to learn Go or install any Go related tooling**. Instead, use a [Go base image](https://hub.docker.com/_/golang) and **follow the instructions in the readme**.
 
 
-## Exercise 1.14: Environment
+## Exercise 1.14: Environment *(20 %)*
 
 > Start both frontend-example and backend-example with correct ports exposed and add ENV to Dockerfile with necessary information from both READMEs
 > ([front](https://github.com/docker-hy/material-applications/tree/main/example-frontend), [back](https://github.com/docker-hy/material-applications/tree/main/example-backend)).
@@ -109,15 +109,16 @@ docker build . --file spring.Dockerfile --tag spring-example
 >
 > Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
 
-The challenge in this exercise is in enabling the frontend and the backend communicate with each other even when they are served from different origins: "For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts." [(MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+**To complete this exercise, update the files [backend.Dockerfile](./backend.Dockerfile) and [frontend.Dockerfile](./frontend.Dockerfile) used in the previous exercises. Also, save the response text you see when you successfully click the "press to test!" button in the frontend in the file [ex-1-14.txt](./ex-1-14.txt).**
+
+
+💡 The challenge in this exercise is in enabling the frontend and the backend communicate with each other even when they are served from different origins: "For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts." [(MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
 > *"Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources"*
 >
 > [Cross-Origin Resource Sharing (CORS). MDN web docs.](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
 
-
-**To complete this exercise, update the files [backend.Dockerfile](./backend.Dockerfile) and [frontend.Dockerfile](./frontend.Dockerfile) used in the previous exercises. Also, save the response text you see when you successfully click the "press to test!" button in the frontend in the file [ex-1-14.txt](./ex-1-14.txt).**
 
 💡 *In case things are not working as supposed, triple check the environment variables. By default the frontend should be **served** from port 5000 and **connect to** port 8080. Backend should be **served** from port 8080 and **allow connections** from port 5000. Also, from CORS point-of-view you cannot mix ip addresses and hostnames (here 127.0.0.1 is not the same as localhost). Also, localhost is not the same as localhost:5000.*
 

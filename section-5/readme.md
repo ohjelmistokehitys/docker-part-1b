@@ -3,7 +3,7 @@
 The theory for the following exercises is presented at https://devopswithdocker.com/part-1/section-5.
 
 
-## Exercise 1.9: Volumes
+## Exercise 1.9: Volumes *(10 %)*
 
 > In this exercise we won't create a new Dockerfile.
 >
@@ -19,7 +19,7 @@ The theory for the following exercises is presented at https://devopswithdocker.
 **Save the command you used to complete the exercise in the file [ex-1-09.txt](./ex-1-09.txt).**
 
 
-## Exercise 1.10: Ports open
+## Exercise 1.10: Ports open *(10 %)*
 
 > In this exercise, we won't create a new Dockerfile.
 >
