@@ -1,28 +1,20 @@
-# DevOps with Docker part 1a
+# DevOps with Docker part 1b
 
-This repository contains teamplates and automated checks for the first three sections in the [DevOps with Docker course](https://devopswithdocker.com/):
+This repository contains teamplates and automated checks for the rest of the first part in the [DevOps with Docker course](https://devopswithdocker.com/):
 
-* [Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1)
-* [Running and stopping containers](https://devopswithdocker.com/part-1/section-2)
-* [In-depth dive to images](https://devopswithdocker.com/part-1/section-3)
+* [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4) (no exercises in this part)
+* [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5)
+* [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6)
 
 The exercises are grouped in folders by their sections in the [DevOps with Docker](https://devopswithdocker.com) course:
 
-* [**section-0**](./section-0/)
+* [**section-5**](./section-5/)
 
-    A sample exercise, which already has a working solution.
+    Exercises 1.9 and 1.10 from [section 5: Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5).
 
-* [**section-1**](./section-1/)
+* [**section-6**](./section-6/)
 
-    Exercises 1.1 and 1.2 from [section 1: Definitions and basic concepts](https://devopswithdocker.com/part-1/section-1).
-
-* [**section-2**](./section-2/)
-
-    Exercises 1.3 and 1.4 from [section 2: Running and stopping containers](https://devopswithdocker.com/part-1/section-2).
-
-* [**section-3**](./section-3/)
-
-    Exercises 1.5, 1.6, 1.7 and 1.8 from [section 3: In-depth dive to images](https://devopswithdocker.com/part-1/section-3).
+    Exercises 1.11-1.14 from [section 6: Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6).
 
 
 ## How to complete this exercise

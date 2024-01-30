@@ -1,1 +1,0 @@
-# Save the output for `docker ps -a` below. It should show 2 stopped containers and one running.

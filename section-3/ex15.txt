@@ -1,3 +1,0 @@
-# Which command(s) did you use for displaying the image size(s)?
-
-# Copy the output of the command(s) here:
