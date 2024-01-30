@@ -1,7 +1,12 @@
 # Part 1 section 6: Utilizing tools from the Registry
 
-The theory for the following exercises is presented at https://devopswithdocker.com/part-1/section-3.
+The theory for the following exercises is presented at https://devopswithdocker.com/part-1/section-6.
 
+To complete these exercises, you'll need to clone, fork or download sample projects from [https://github.com/docker-hy/material-applications](https://github.com/docker-hy/material-applications). You don't need to include the sample projects in your exercise repository when returning the exercises.
+
+📣 Notice, that all the information presented in the example projects are not needed in all the exercises. Don't just copypaste, but consider which commands are useful and where.
+
+📣 **You don't need to install any of the tools or applications used by the sample projects locally.** All installations are supposed to happen in the containers during the build process.
 
 
 ## Exercise 1.11: Spring
@@ -14,10 +19,17 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > You've completed the exercise when you see a 'Success' message in your browser.
 >
-> Submit the Dockerfile you used to run the container.
+> Submit the Dockerfile you used to build the container.
 >
 > Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
 
+**Save your solution for this exercise in the file [spring.Dockerfile](./spring.Dockerfile).**
+
+💡 The Dockerfiles in these exercises have names, so you will need to [specify which file to use when building them](https://docs.docker.com/engine/reference/commandline/image_build/#file). In this exercise, you'll need to use the file [spring.Dockerfile](./server.Dockerfile), so your build command could be something like:
+
+```sh
+docker build . --file spring.Dockerfile --tag spring-example
+```
 
 ## Exercises 1.12-1.14
 
@@ -36,6 +48,7 @@ The theory for the following exercises is presented at https://devopswithdocker.
 > Create a Dockerfile for the project (example-frontend) and give a command so that the project runs in a Docker container with port 5000
 > exposed and published so when you start the container and navigate to [http://localhost:5000](http://localhost:5000)
 > you will see message if you're successful.
+>
 > * note that the port 5000 is reserved in the more recent OSX versions (Monterey, Big Sur), so you have to use some other host port
 >
 > _As in other exercises, do not alter the code of the project_
@@ -44,11 +57,13 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > * TIP: Note that the app starts to accept connections when "Accepting connections at http://localhost:5000" has been printed to the screen, this takes a few seconds
 >
-> * TIP: You do not have to install anything new outside containers.
+> * TIP: You do not have to install anything new on your computer (instead, the installation should be done inside the containers).
 >
 > Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
 
-**Save your solution for this exercise in the file [frontend.Dockerfile](./frontend.Dockerfile).**
+**Save your solution for this exercise in the file [frontend.Dockerfile](./frontend.Dockerfile). Also, save the message you received in the browser in the file [ex-1-12.txt](./ex-1-12.txt).**
+
+⚠ **Note!** Based on the Haaga-Helia teachers' experience, the dependencies of the frontend project are very picky about the Node.js version and the environment. We strongly recommend using node:16 base image (`FROM node:16`) in this exercise to prevent unnecessary compatibility issues.
 
 
 ## Exercise 1.13: Hello, backend!
@@ -64,7 +79,9 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
 
-**Save your solution for this exercise in the file [backend.Dockerfile](./backend.Dockerfile). Also, save the command you used to start the container in the file [ex-1-13.txt](./ex-1-13.txt).**
+**Save your solution for this exercise in the file [backend.Dockerfile](./backend.Dockerfile).**
+
+💡 The backend in this exercise is written in [Go (golang)](https://go.dev/). **You won't need to learn Go or install any Go related tooling**. Instead, use a [Go base image](https://hub.docker.com/_/golang) and **follow the instructions in the readme**.
 
 
 ## Exercise 1.14: Environment
@@ -92,8 +109,24 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
 
+The challenge in this exercise is in enabling the frontend and the backend communicate with each other even when they are served from different origins: "For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts." [(MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+> *"Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources"*
+>
+> [Cross-Origin Resource Sharing (CORS). MDN web docs.](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+
+
+
+**To complete this exercise, update the files [backend.Dockerfile](./backend.Dockerfile) and [frontend.Dockerfile](./frontend.Dockerfile) used in the previous exercises. Also, save the response text you see when you successfully click the "press to test!" button in the frontend in the file [ex-1-14.txt](./ex-1-14.txt).**
+
+💡 *In case things are not working as supposed, triple check the environment variables. By default the frontend should be **served** from port 5000 and **connect to** port 8080. Backend should be **served** from port 8080 and **allow connections** from port 5000. Also, from CORS point-of-view you cannot mix ip addresses and hostnames (here 127.0.0.1 is not the same as localhost). Also, localhost is not the same as localhost:5000.*
+
+-------------
 
 ## Extra exercises 1.15-1.16
+
+The following exercises are extra and not a part of the Haaga-Helia course.
+
 
 ## Exercise 1.15: Homework
 

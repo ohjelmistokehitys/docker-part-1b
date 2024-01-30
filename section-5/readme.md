@@ -32,4 +32,4 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > Source: https://devopswithdocker.com/part-1/section-5#exercise-110
 
-**Save the commands you used to start process and the command(s) you used to fix the ensuing problems in the file [ex-1-10.txt](./ex-1-10.txt).**
+**Save the command you used to complete the exercise in the file [ex-1-10.txt](./ex-1-10.txt).**
