@@ -1,6 +1,6 @@
 # DevOps with Docker part 1b
 
-This repository contains teamplates and automated checks for the rest of the first part in the [DevOps with Docker course](https://devopswithdocker.com/):
+This repository contains templates and automated checks for the part 1 in [DevOps with Docker course](https://devopswithdocker.com/):
 
 * [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4) (no exercises in this part)
 * [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5)
@@ -10,11 +10,11 @@ The exercises are grouped in folders by their sections in the [DevOps with Docke
 
 * [**section-5**](./section-5/)
 
-    Exercises 1.9 and 1.10 from [section 5: Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5).
+    Exercises 1.9 and 1.10
 
 * [**section-6**](./section-6/)
 
-    Exercises 1.11-1.14 from [section 6: Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6).
+    Exercises 1.11-1.14
 
 
 ## How to complete this exercise

@@ -4,7 +4,7 @@ The theory for the following exercises is presented at https://devopswithdocker.
 
 To complete these exercises, you'll need to clone, fork or download sample projects from [https://github.com/docker-hy/material-applications](https://github.com/docker-hy/material-applications). You don't need to include the sample projects in your exercise repository when returning the exercises.
 
-📣 Notice, that all the information presented in the example projects are not needed in all the exercises. Don't just copypaste, but consider which commands are useful and where.
+📣 Notice that all the information presented in the example projects are not needed in all the exercises. Don't just copypaste, but consider which commands are useful and where.
 
 📣 **You don't need to install any of the tools or applications used by the sample projects locally.** All installations are supposed to happen in the containers during the build process.
 
@@ -25,11 +25,12 @@ To complete these exercises, you'll need to clone, fork or download sample proje
 
 **Save your solution for this exercise in the file [spring.Dockerfile](./spring.Dockerfile).**
 
-💡 The Dockerfiles in these exercises have names, so you will need to [specify which file to use when building them](https://docs.docker.com/engine/reference/commandline/image_build/#file). In this exercise, you'll need to use the file [spring.Dockerfile](./server.Dockerfile), so your build command could be something like:
+💡 The Dockerfiles in these exercises have custom names, so you will need to [specify which file to use when building the container images](https://docs.docker.com/engine/reference/commandline/image_build/#file). In this exercise, you'll need to use the file called [spring.Dockerfile](./server.Dockerfile), so your build command could be something like:
 
 ```sh
 docker build . --file spring.Dockerfile --tag spring-example
 ```
+
 
 ## Exercises 1.12-1.14
 
@@ -63,7 +64,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 
 **Save your solution for this exercise in the file [frontend.Dockerfile](./frontend.Dockerfile). Also, save the message you received in the browser in the file [ex-1-12.txt](./ex-1-12.txt).**
 
-⚠ **Note!** Based on the Haaga-Helia teachers' experience, the dependencies of the frontend project are very picky about the Node.js version and the environment. We strongly recommend using node:16 base image (`FROM node:16`) in this exercise to prevent unnecessary compatibility issues.
+📣 **Note!** Based on the Haaga-Helia teacher's experience, the dependencies of the frontend project are very picky about the Node.js version and the environment in general. We strongly recommend using **node:16** base image in this exercise to prevent unnecessary compatibility issues (`FROM node:16`).
 
 
 ## Exercise 1.13: Hello, backend! *(20 %)*
@@ -81,7 +82,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 
 **Save your solution for this exercise in the file [backend.Dockerfile](./backend.Dockerfile).**
 
-💡 The backend in this exercise is written in [Go (golang)](https://go.dev/). **You won't need to learn Go or install any Go related tooling**. Instead, use a [Go base image](https://hub.docker.com/_/golang) and **follow the instructions in the readme**.
+💡 The backend in this exercise is written in [Go (golang)](https://go.dev/). **You won't need to learn Go or install any Go related tooling**. Instead, use an official [Go base image](https://hub.docker.com/_/golang) and **follow the instructions in the readme** to install and start the backend.
 
 
 ## Exercise 1.14: Environment *(20 %)*
@@ -109,18 +110,18 @@ docker build . --file spring.Dockerfile --tag spring-example
 >
 > Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
 
-**To complete this exercise, update the files [backend.Dockerfile](./backend.Dockerfile) and [frontend.Dockerfile](./frontend.Dockerfile) used in the previous exercises. Also, save the response text you see when you successfully click the "press to test!" button in the frontend in the file [ex-1-14.txt](./ex-1-14.txt).**
+**To complete this exercise, you need to make changes in the [backend.Dockerfile](./backend.Dockerfile) and [frontend.Dockerfile](./frontend.Dockerfile) files. Also, save the response text you see when you successfully click the "press to test!" button in the frontend in the file [ex-1-14.txt](./ex-1-14.txt).**
 
-
-💡 The challenge in this exercise is in enabling the frontend and the backend communicate with each other even when they are served from different origins: "For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts." [(MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+💡 The challenge in this exercise is in enabling the frontend and the backend communicate with each other even when they are served from different origins, in this case different ports. "For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts." [(MDN web docs)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
 > *"Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources"*
 >
 > [Cross-Origin Resource Sharing (CORS). MDN web docs.](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
+You will need to configure the frontend to make connections to the backend using the correct address and port. The backend needs to expect connections from the correct frontend URL. Both applications can be configured to work together with environment variables and you do not need to make changes in their code.
 
 
-💡 *In case things are not working as supposed, triple check the environment variables. By default the frontend should be **served** from port 5000 and **connect to** port 8080. Backend should be **served** from port 8080 and **allow connections** from port 5000. Also, from CORS point-of-view you cannot mix ip addresses and hostnames (here 127.0.0.1 is not the same as localhost). Also, localhost is not the same as localhost:5000.*
+💡 *In case things are not working as supposed, triple check the environment variables. If you are using the default ports, the frontend should be served from port 5000 and make connections to the backend at port 8080. Backend should be served from port 8080 and allow connections from `http://localhost:5000`. In CORS you cannot mix ip addresses and hostnames (`127.0.0.1` is not the same as `localhost`). Also, `http://localhost` is not the same as `http://localhost:5000`.*
 
 -------------
 

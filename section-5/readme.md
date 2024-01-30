@@ -16,7 +16,7 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > Source: https://devopswithdocker.com/part-1/section-5#exercise-19
 
-**Save the command you used to complete the exercise in the file [ex-1-09.txt](./ex-1-09.txt).**
+**Save the command(s) you used to complete the exercise in the file [ex-1-09.txt](./ex-1-09.txt).**
 
 
 ## Exercise 1.10: Ports open *(10 %)*
@@ -32,4 +32,4 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > Source: https://devopswithdocker.com/part-1/section-5#exercise-110
 
-**Save the command you used to complete the exercise in the file [ex-1-10.txt](./ex-1-10.txt).**
+**Save the command(s) you used to complete the exercise in the file [ex-1-10.txt](./ex-1-10.txt).**
