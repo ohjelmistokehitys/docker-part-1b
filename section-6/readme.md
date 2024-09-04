@@ -21,7 +21,7 @@ To complete these exercises, you'll need to clone, fork or download sample proje
 >
 > Submit the Dockerfile you used to build the container.
 >
-> Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
+> *Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114*
 
 **Save your solution for this exercise in the file [spring.Dockerfile](./spring.Dockerfile).**
 
@@ -36,7 +36,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 
 > The following three exercises will start a larger project that we will configure in parts 2 and 3. They will require you to use everything you've learned up until now. If you need to modify a Dockerfile in some later exercises, feel free to do it on top of the Dockerfiles you create here.
 >
-> Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
+> *Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114*
 
 
 ## Exercise 1.12: Hello, frontend! *(20 %)*
@@ -60,7 +60,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 >
 > * TIP: You do not have to install anything new on your computer (instead, the installation should be done inside the containers).
 >
-> Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
+> *Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114*
 
 **Save your solution for this exercise in the file [frontend.Dockerfile](./frontend.Dockerfile). Also, save the message you received in the browser in the file [ex-1-12.txt](./ex-1-12.txt).**
 
@@ -78,7 +78,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 >
 > _Do not alter the code of the project_
 >
-> Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
+> *Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114*
 
 **Save your solution for this exercise in the file [backend.Dockerfile](./backend.Dockerfile).**
 
@@ -108,7 +108,7 @@ docker build . --file spring.Dockerfile --tag spring-example
 >
 > * TIP: Developer console has multiple views, most important ones are Console and Network. Exploring the Network tab can give you a lot of information on where messages are being sent and what is received as response!
 >
-> Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114
+> *Source: https://devopswithdocker.com/part-1/section-6/#exercises-111-114*
 
 **To complete this exercise, you need to make changes in the [backend.Dockerfile](./backend.Dockerfile) and [frontend.Dockerfile](./frontend.Dockerfile) files. Also, save the response text you see when you successfully click the "press to test!" button in the frontend in the file [ex-1-14.txt](./ex-1-14.txt).**
 
@@ -157,6 +157,6 @@ There are no automated tests for this extra exercise. You don't need to submit a
 >
 > Submit the Dockerfile, a brief description of what you did, and a link to the running app.
 >
-> Source: https://devopswithdocker.com/part-1/section-6/#exercises-115-116
+> *Source: https://devopswithdocker.com/part-1/section-6/#exercises-115-116*
 
 There are no automated tests for this extra exercise. You don't need to submit anything, but if you wish, you can add a new file with information about your deployment experience.

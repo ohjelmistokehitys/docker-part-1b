@@ -2,6 +2,19 @@
 
 The theory for the following exercises is presented at https://devopswithdocker.com/part-1/section-5.
 
+> [!WARNING]
+> Security reminder: Opening a door to the internet
+>
+> Since we are opening a port to the application, anyone from the internet could come in and access what you're running.
+>
+> Don't haphazardly open just any ports - a way for an attacker to get in is by exploiting a port you opened to an insecure server. An easy way to avoid this is by defining the host-side port like this -p 127.0.0.1:3456:3000. This will only allow requests from your computer through port 3456 to the application port 3000, with no outside access allowed.
+>
+> The short syntax, -p 3456:3000, will result in the same as -p 0.0.0.0:3456:3000, which truly is opening the port to everyone.
+>
+> Usually, this isn't risky. But depending on the application, it is something you should consider!
+>
+> *Source: https://devopswithdocker.com/part-1/section-5*
+
 
 ## Exercise 1.9: Volumes *(10 %)*
 
@@ -14,7 +27,7 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > **Hint:** read the note that was made just before this exercise!
 >
-> Source: https://devopswithdocker.com/part-1/section-5#exercise-19
+> *Source: https://devopswithdocker.com/part-1/section-5#exercise-19*
 
 **Save the command(s) you used to complete the exercise in the file [ex-1-09.txt](./ex-1-09.txt).**
 
@@ -30,6 +43,6 @@ The theory for the following exercises is presented at https://devopswithdocker.
 >
 > Submit your used commands for this exercise.
 >
-> Source: https://devopswithdocker.com/part-1/section-5#exercise-110
+> *Source: https://devopswithdocker.com/part-1/section-5#exercise-110*
 
 **Save the command(s) you used to complete the exercise in the file [ex-1-10.txt](./ex-1-10.txt).**

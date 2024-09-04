@@ -6,6 +6,10 @@ This repository contains templates and automated checks for the part 1 in [DevOp
 * [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5)
 * [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6)
 
+> [!IMPORTANT]
+> Note that **you do not have to install anything new outside containers**. Required tools, such as Ruby, Java or Go, are always installed **inside the containers**.
+
+
 The exercises are grouped in folders by their sections in the [DevOps with Docker](https://devopswithdocker.com) course:
 
 * [**section-5**](./section-5/)
