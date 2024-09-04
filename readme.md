@@ -2,7 +2,7 @@
 
 This repository contains templates and automated checks for the part 1 in [DevOps with Docker course](https://devopswithdocker.com/):
 
-* [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4) (no exercises in this part)
+* [Defining start conditions for the container](https://devopswithdocker.com/part-1/section-4) (no exercises in this section)
 * [Interacting with the container via volumes and ports](https://devopswithdocker.com/part-1/section-5)
 * [Utilizing tools from the Registry](https://devopswithdocker.com/part-1/section-6)
 
@@ -19,7 +19,7 @@ The exercises are grouped in folders by their sections in the [DevOps with Docke
 
 ## How to complete this exercise
 
-First, make sure you are working ony our personal copy of the repository. You can find more information about that in the course assignment.
+First, make sure you are working on your personal copy of the repository. You can find more information about that in the course assignment.
 
 Complete the exercises while reading [the course material](https://devopswithdocker.com/) and the [Docker documentation](https://docs.docker.com/). You will also need to read the documentation for specific containers used in the exercises.
 
