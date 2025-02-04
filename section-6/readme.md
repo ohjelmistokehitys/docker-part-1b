@@ -31,6 +31,8 @@ To complete these exercises, you'll need to clone, fork or download sample proje
 docker build . --file spring.Dockerfile --tag spring-example
 ```
 
+⚠️ If you encounter the error `/bin/sh: 1: ./mvnw: not found` in the `./mvnw package` phase in your build, it may be caused by [Windows-style line endings in your Docker container](https://stackoverflow.com/questions/1552749/difference-between-cr-lf-lf-and-cr-line-break-types/1552775#1552775). This is a common issue when working on a project in multiple environments. [GitHub has its own instructions for handling line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings), and you can also fix the issue by [saving the `mvnw` script with correct line endings in VS Code](https://stackoverflow.com/questions/39525417/visual-studio-code-how-to-show-line-endings/39532890#39532890).
+
 
 ## Exercises 1.12-1.14
 
